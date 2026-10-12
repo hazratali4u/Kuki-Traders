@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AppMaster.master.cs" Inherits="AppMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+    <head id="Head1" runat="server">
+    <title>SAMS</title>
+    <script type="text/javascript" src="../AjaxLibrary/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="../AjaxLibrary/jquery.maskedinput.js"></script>
+    <script type="text/javascript" src="../AjaxLibrary/jquery.tablesorter.js"></script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Granite/Popup.css" rel="stylesheet" type="text/css" /> 
+    <link href="../App_Themes/Granite/GridSorter.css" rel="stylesheet" type="text/css" />
+
+    	<script type="text/javascript"> 
+//	<!-- #include virtual="../AjaxLibrary/VwdCmsSplitterBar.js" -->
+	</script> 
+
+    <script language="javascript" type="text/javascript"><!--
+
+        function splitterOnResize(width) {
+            // do any other work that needs to happen when the 
+            // splitter resizes. this is a good place to handle 
+            // any complex resizing rules, etc.
+
+            // make sure the width is in number format
+            if (typeof width == "string") {
+                width = new Number(width.replace("px", ""));
+            }
+
+            // now do something...
+        }
+    
+// -->
+</script>
+
+    <!--[if IE 5]>
+    <style type="text/css">		
+	    .sidebarcontainer td, .sidebarcontainer tr {font-size:smaller;}		
+	    #subnav a {height:1em;}
+        body td, body th {font-size:0.78em;}		
+    </style>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <style type="text/css">		        
+       #rightcolumn{margin-right: -152px;}
+    </style>
+    <![endif]-->	   
+
+    </head>
+    <body>
+   	    <form id="mainForm" runat="server" >       	             
+   	        <asp:ScriptManager ID="MainScriptManager" runat="server" AsyncPostBackTimeout="300" EnablePartialRendering="true"/> 	 
+            <header>
+<ul>
+    <li>Welcome</li>
+    <li><span><asp:Label ID="lblUser" runat="server" Text="User"></asp:Label></span></li>
+    <li>
+      <div><ul>
+      <li><p>&nbsp;</p></li>
+        <li><a href="frmChangePassword.aspx">Change Password</a></li>
+        <li><a href="Logout.aspx">Log Out</a></li>
+      </ul></div>
+      <img src="../images/userarrow.png" width="10" height="8"></li>
+      <br />
+      <li>Working Date: </li>
+      <li><strong> <asp:Label ID="lblWorkingDate" runat="server"></asp:Label>  </strong></li>
+  </ul>
+<div id="logo"><a href="Home.aspx"><img src="../images/logo.jpg" alt=""></a></div>
+  <nav> 
+    <asp:Literal runat="server" ID="ltrlMenu" />
+  </nav>
+</header><table style="float:left;" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td id="tdTree1" width="20%" align="left" valign="top" bgcolor="#FFFFFF">
+<div id="left">
+                    <div runat="server" id="divTree1" style="height: 100%; overflow: auto; padding: 0px;
+                        margin: 0px;">
+                        <img id="mold_left" src="../images/mold-left.png" width="10" height="10">
+                        <h3>
+                            Menu</h3>
+                        <div id="leftMenu">
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <contenttemplate>
+                                    <asp:GridView ID="gvLeftMenu" runat="server" AutoGenerateColumns="False" Width="100%"
+                                        DataKeyNames="MENU_ID" CellPadding="0" CellSpacing="0" ForeColor="Black" GridLines="None"
+                                        ShowHeader="false" OnRowDataBound="gvLeftMenu_RowDataBound">
+                                        <Columns>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <table cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td>
+                                                                <h11>
+                                    <%# Eval("MENU_DESCRIPTION")%></h11>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <asp:GridView ID="gvLeftMenuSub" runat="server" AutoGenerateColumns="False" CellPadding="0"
+                                                                        CellSpacing="0" GridLines="None" ShowHeader="false">
+                                                                        <Columns>
+                                                                            <asp:TemplateField HeaderText="Name">
+                                                                                <ItemTemplate>
+                                                                                    <table cellpadding="0" cellspacing="0" class="tbl2">
+                                                                                        <tr>
+                                                                                            <td width="5">
+                                                                                                &nbsp;
+                                                                                            </td>
+                                                                                            <td style="font-size: 15px">
+                                                                                                <a href="<%# Eval("MENU_KEY")%>?LevelType=3&TopID=<%# Eval("SndLayerId")%>&LevelID=<%# Eval("MENU_ID")%>"
+                                                                                                    style="text-decoration: none; color: #006699;">
+                                                                                                    <%# Eval("MENU_DESCRIPTION")%></a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </ItemTemplate>
+                                                                            </asp:TemplateField>
+                                                                        </Columns>
+                                                                    </asp:GridView>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+                                </contenttemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </div>
+                </div>
+</td>
+<td valign="top" align="left" style="width:5px;"></td>
+<td id="tdMid1" align="center" valign="top" style="width:6px;"></td>
+<td id="tdEdit1" align="left" valign="top" bgcolor="#FFFFFF">
+<div id="right"><img id="mold_right" src="../images/mold-right.png" width="10" height="10" />
+    <asp:ContentPlaceHolder runat="server" ID="mainCopy">
+    </asp:ContentPlaceHolder>
+</div>
+</td>
+</tr>
+</table>
+<VwdCms:SplitterBar runat="server" ID="vsbSplitter1" 
+        LeftResizeTargets="tdTree1;divTree1" 
+        MinWidth="100" 
+        MaxWidth="550"
+        BackgroundColor="lightsteelblue" 
+        BackgroundColorLimit="firebrick"        
+        BackgroundColorResizing="purple"
+        SaveWidthToElement="txtWidth1"
+        OnResizeFunction="splitterOnResize"
+        style="background-image:url(../images/bg.png);
+        background-position:center center;
+        background-repeat:repeat-y;" />
+
+</form>
+    </body>
+</html>

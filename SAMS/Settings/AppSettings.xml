@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppSettings>
+  <Server>192.168.18.221</Server>
+  <DBName>Kuki</DBName>
+  <DBUser>sa</DBUser>
+  <DBPassword>fast1234</DBPassword>
+  <DBAuthentication>MSDE</DBAuthentication>
+
+  <!--<Server>db2.fastservices.pk</Server>
+  <DBName>Kuki</DBName>
+  <DBUser>Developer</DBUser>
+  <DBPassword>developer1122#</DBPassword>
+  <DBAuthentication>MSDE</DBAuthentication>-->
+  
+</AppSettings>

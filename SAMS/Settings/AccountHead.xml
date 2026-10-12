@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AccountHead>  
+<PurchaseDiscount>174</PurchaseDiscount>
+<PurchaseScheme>0</PurchaseScheme>
+<SalesTaxPayable>70</SalesTaxPayable>	
+<PayabletoPrincipal>94</PayabletoPrincipal>   	 
+<TransferOut>143</TransferOut>
+<TransferIN>142</TransferIN>	
+<AccountReceivable>267</AccountReceivable>
+<BankDefualtType>382</BankDefualtType>
+<CashDefualtType>753</CashDefualtType>
+<CashDefualt>135</CashDefualt>
+<BankDefualt>10</BankDefualt>
+<CurrentAssets>11</CurrentAssets>
+<SaleAccount>243</SaleAccount>	
+<SaleDiscount>567</SaleDiscount>  
+<StockInHand>103</StockInHand>
+<SaleReturnAccount>245</SaleReturnAccount>
+<SaleReturnDiscount>154</SaleReturnDiscount>
+<SaleReturnGST>158</SaleReturnGST>
+<FreeStock>0</FreeStock>
+<IncomeTax>127</IncomeTax>
+<ExpDefualtType>7</ExpDefualtType>	
+<PeatyCash>258</PeatyCash>		
+<BuiltyExp>165</BuiltyExp>
+<mAdnvanceAC>422</mAdnvanceAC>
+<mBankCollectionAC>421</mBankCollectionAC>
+<MainCashSale>135</MainCashSale>
+
+<NGStock>1183</NGStock>
+
+<Stock70ccParts>929</Stock70ccParts>
+<Stock100ccParts>930</Stock100ccParts>
+<Stock125ccParts>931</Stock125ccParts>
+<Stock150ccParts>932</Stock150ccParts>
+
+<DamageStock70ccParts>1026</DamageStock70ccParts>
+<DamageStock100ccParts>1027</DamageStock100ccParts>
+<DamageStock125ccParts>149</DamageStock125ccParts>
+<DamageStock150ccParts>150</DamageStock150ccParts>
+  
+<ShortStock70ccParts>1181</ShortStock70ccParts>
+<ShortStock100ccParts>1182</ShortStock100ccParts>
+<ShortStock125ccParts>141</ShortStock125ccParts>
+<ShortStock150ccParts>142</ShortStock150ccParts>
+  
+<ExcessStock70ccParts>1032</ExcessStock70ccParts>
+<ExcessStock100ccParts>1033</ExcessStock100ccParts>
+<ExcessStock125ccParts>145</ExcessStock125ccParts>
+<ExcessStock150ccParts>146</ExcessStock150ccParts>
+
+<LocalPartsVendor2W>744</LocalPartsVendor2W>
+<ImportedPartsVendor2W>991</ImportedPartsVendor2W>
+  
+<LocalPartsVendor3W>992</LocalPartsVendor3W>
+<ImportedPartsVendor3W>993</ImportedPartsVendor3W>
+  
+
+<SouthZone>791</SouthZone>
+<EastZoneSouthPunjab>800</EastZoneSouthPunjab>
+<EastZoneCentralPunjab>953</EastZoneCentralPunjab>
+<NortZone>954</NortZone>
+<WestZone>955</WestZone>
+<UnKnownAmounts>1153</UnKnownAmounts>
+<SaleTaxReceivable-Local>1017</SaleTaxReceivable-Local>
+<SaleTaxReceivable-Imported>1018</SaleTaxReceivable-Imported>
+  <UNRegisterTax>812</UNRegisterTax>
+  <RegisterTax>813</RegisterTax>
+  <AdditionalTax>814</AdditionalTax>
+
+  <InvoiceDiscountVendors>838</InvoiceDiscountVendors>
+  <InvoiceDiscount>840</InvoiceDiscount>
+  <RateDiscount>841</RateDiscount>
+  <RecoveryDiscount>1180</RecoveryDiscount>
+
+
+  <Sale70ccParts>97</Sale70ccParts>
+  <Sale100ccParts>869</Sale100ccParts>
+    <Sale125ccParts>870</Sale125ccParts>
+      <Sale150ccParts>958</Sale150ccParts>
+
+
+  <Cost70ccParts>1001</Cost70ccParts>
+  <Cost100ccParts>1002</Cost100ccParts>
+  <Cost125ccParts>1003</Cost125ccParts>
+  <Cost150ccParts>1004</Cost150ccParts>
+  <RejectStock>1021</RejectStock>
+</AccountHead>

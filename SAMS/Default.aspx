@@ -1,0 +1,12 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginMaster.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<%@ PreviousPageType VirtualPath="~/Login.aspx"%>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cpChild" Runat="Server">
+
+</asp:Content>
+
